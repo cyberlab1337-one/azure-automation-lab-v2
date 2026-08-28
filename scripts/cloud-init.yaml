@@ -1,0 +1,28 @@
+#cloud-config
+
+package_update: true
+
+packages:
+  - nginx
+
+write_files:
+  - path: /var/www/html/index.html
+    owner: root:root
+    permissions: '0644'
+    content: |
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <title>Azure Lab 01</title>
+      </head>
+      <body>
+        <h1>Azure Lab 01</h1>
+        <p>Nginx was installed and configured automatically using cloud-init.</p>
+        <p>Infrastructure deployed with Bicep.</p>
+      </body>
+      </html>
+
+runcmd:
+  - systemctl enable nginx
+  - systemctl start nginx
