@@ -23,6 +23,8 @@ param adminUsername string
 param identityName string
 param keyVaultName string
 
+param logAnalyticsName string
+
 resource rg 'Microsoft.Resources/resourceGroups@2025-04-01' = {
   name: resourceGroupName
   location: location
@@ -92,5 +94,15 @@ module rbac './modules/rbac.bicep' = {
   params: {
     keyVaultName: keyVault.outputs.keyVaultName
     identityPrincipalId: identity.outputs.identityPrincipalId
+  }
+}
+
+module monitoring './modules/monitoring.bicep' = {
+  name: 'monitoring-deployment'
+  scope: rg
+  params: {
+    location: location
+    logAnalyticsName: logAnalyticsName
+    keyVaultName: keyVault.outputs.keyVaultName
   }
 }

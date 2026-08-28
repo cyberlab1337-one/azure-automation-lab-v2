@@ -15,6 +15,9 @@ lab02
 │   ├── network.bicep
 │   ├── bastion.bicep
 │   ├── identity.bicep
+│   ├── keyvault.bicep
+│   ├── rbac.bicep
+│   ├── monitoring.bicep
 │   └── vm.bicep
 ├── parameters/
 │   └── dev.bicepparam
@@ -46,22 +49,44 @@ Resource Group
 
 ```
 
+## Validation
+```
+az bicep lint --file deploy.bicep
+```
+```
+az deployment sub validate \
+  --name lab02-validation-v2 \
+  --location westeurope \
+  --template-file deploy.bicep \
+  --parameters ./parameters/dev.bicepparam \
+  --output json \
+  > evidence/01-validation-lab02.json
+```
+## What-if
+```
+az deployment sub what-if \
+  --name lab02-whatif-v1 \
+  --location westeurope \
+  --template-file deploy.bicep \
+  --parameters ./parameters/dev.bicepparam \
+  > evidence/01-whatif-lab02.md
+```
+## Deployment
+```
+az deployment sub create \
+  --name lab02-deployment \
+  --location westeurope \
+  --template-file deploy.bicep \
+  --parameters ./parameters/dev.bicepparam
+  --output \
+  > evidence/03-deployment-lab02.json
+```
+```
+az deployment sub show \
+  --name lab01-deployment \
+  --query "{name:name,state:properties.provisioningState,timestamp:properties.timestamp}" \
+  --output table
+```
+## Deployed resources
 
-│
-├── VNet
-│   ├── app-subnet
-│   │    └── Linux VM
-│   │         ├── nginx
-│   │         └── Managed Identity
-│   │
-│   └── AzureBastionSubnet
-│        └── Bastion
-│
-├── NSG
-│
-├── Key Vault
-│    └── secret
-│
-├── Log Analytics Workspace
-│
-└── Monitoring / diagnostic settings
+![Pipeline Stages](images/02-azure-resources.png)

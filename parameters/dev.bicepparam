@@ -26,3 +26,5 @@ param networkInterfaceName = 'lab02-nic-weu'
 param identityName = 'id-lab02-dev-weu'
 param keyVaultName = 'keyvault-lab02-dev-weu'
 
+param logAnalyticsName = 'lab02-law-weu'
+
