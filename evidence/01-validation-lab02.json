@@ -1,0 +1,451 @@
+{
+  "error": null,
+  "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/providers/Microsoft.Resources/deployments/lab02-validation-v2",
+  "location": "westeurope",
+  "name": "lab02-validation-v2",
+  "properties": {
+    "correlationId": "23880407-ca1b-459a-9779-ab18a25b2f3c",
+    "debugSetting": null,
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu",
+            "resourceName": "lab02-rg-weu",
+            "resourceType": "Microsoft.Resources/resourceGroups"
+          }
+        ],
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/network-deployment",
+        "resourceGroup": "lab02-rg-weu",
+        "resourceName": "network-deployment",
+        "resourceType": "Microsoft.Resources/deployments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/network-deployment",
+            "resourceGroup": "lab02-rg-weu",
+            "resourceName": "network-deployment",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu",
+            "resourceName": "lab02-rg-weu",
+            "resourceType": "Microsoft.Resources/resourceGroups"
+          },
+          {
+            "apiVersion": "2025-04-01",
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/network-deployment",
+            "resourceGroup": "lab02-rg-weu",
+            "resourceName": "network-deployment",
+            "resourceType": "Microsoft.Resources/deployments"
+          }
+        ],
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/bastion-deployment",
+        "resourceGroup": "lab02-rg-weu",
+        "resourceName": "bastion-deployment",
+        "resourceType": "Microsoft.Resources/deployments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/identity-deployment",
+            "resourceGroup": "lab02-rg-weu",
+            "resourceName": "identity-deployment",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/network-deployment",
+            "resourceGroup": "lab02-rg-weu",
+            "resourceName": "network-deployment",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu",
+            "resourceName": "lab02-rg-weu",
+            "resourceType": "Microsoft.Resources/resourceGroups"
+          },
+          {
+            "apiVersion": "2025-04-01",
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/identity-deployment",
+            "resourceGroup": "lab02-rg-weu",
+            "resourceName": "identity-deployment",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "apiVersion": "2025-04-01",
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/network-deployment",
+            "resourceGroup": "lab02-rg-weu",
+            "resourceName": "network-deployment",
+            "resourceType": "Microsoft.Resources/deployments"
+          }
+        ],
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/vm-deployment",
+        "resourceGroup": "lab02-rg-weu",
+        "resourceName": "vm-deployment",
+        "resourceType": "Microsoft.Resources/deployments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu",
+            "resourceName": "lab02-rg-weu",
+            "resourceType": "Microsoft.Resources/resourceGroups"
+          }
+        ],
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/identity-deployment",
+        "resourceGroup": "lab02-rg-weu",
+        "resourceName": "identity-deployment",
+        "resourceType": "Microsoft.Resources/deployments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu",
+            "resourceName": "lab02-rg-weu",
+            "resourceType": "Microsoft.Resources/resourceGroups"
+          }
+        ],
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/keyvault-deployment",
+        "resourceGroup": "lab02-rg-weu",
+        "resourceName": "keyvault-deployment",
+        "resourceType": "Microsoft.Resources/deployments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/identity-deployment",
+            "resourceGroup": "lab02-rg-weu",
+            "resourceName": "identity-deployment",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/keyvault-deployment",
+            "resourceGroup": "lab02-rg-weu",
+            "resourceName": "keyvault-deployment",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu",
+            "resourceName": "lab02-rg-weu",
+            "resourceType": "Microsoft.Resources/resourceGroups"
+          },
+          {
+            "apiVersion": "2025-04-01",
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/keyvault-deployment",
+            "resourceGroup": "lab02-rg-weu",
+            "resourceName": "keyvault-deployment",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "apiVersion": "2025-04-01",
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/identity-deployment",
+            "resourceGroup": "lab02-rg-weu",
+            "resourceName": "identity-deployment",
+            "resourceType": "Microsoft.Resources/deployments"
+          }
+        ],
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/rbac-deployment",
+        "resourceGroup": "lab02-rg-weu",
+        "resourceName": "rbac-deployment",
+        "resourceType": "Microsoft.Resources/deployments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/keyvault-deployment",
+            "resourceGroup": "lab02-rg-weu",
+            "resourceName": "keyvault-deployment",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu",
+            "resourceName": "lab02-rg-weu",
+            "resourceType": "Microsoft.Resources/resourceGroups"
+          },
+          {
+            "apiVersion": "2025-04-01",
+            "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/keyvault-deployment",
+            "resourceGroup": "lab02-rg-weu",
+            "resourceName": "keyvault-deployment",
+            "resourceType": "Microsoft.Resources/deployments"
+          }
+        ],
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/monitoring-deployment",
+        "resourceGroup": "lab02-rg-weu",
+        "resourceName": "monitoring-deployment",
+        "resourceType": "Microsoft.Resources/deployments"
+      }
+    ],
+    "diagnostics": [
+      {
+        "additionalInfo": null,
+        "code": "NestedDeploymentShortCircuited",
+        "level": "Warning",
+        "message": "A nested deployment got short-circuited and all its resources got skipped from validation. This is due to a nested template having a parameter that was not fully evaluated (e.g. contains a reference() function). Please see https://aka.ms/WhatIfEvalStopped for more guidance.",
+        "target": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/bastion-deployment"
+      },
+      {
+        "additionalInfo": null,
+        "code": "NestedDeploymentShortCircuited",
+        "level": "Warning",
+        "message": "A nested deployment got short-circuited and all its resources got skipped from validation. This is due to a nested template having a parameter that was not fully evaluated (e.g. contains a reference() function). Please see https://aka.ms/WhatIfEvalStopped for more guidance.",
+        "target": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/vm-deployment"
+      },
+      {
+        "additionalInfo": null,
+        "code": "NestedDeploymentShortCircuited",
+        "level": "Warning",
+        "message": "A nested deployment got short-circuited and all its resources got skipped from validation. This is due to a nested template having a parameter that was not fully evaluated (e.g. contains a reference() function). Please see https://aka.ms/WhatIfEvalStopped for more guidance.",
+        "target": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/rbac-deployment"
+      },
+      {
+        "additionalInfo": null,
+        "code": "NestedDeploymentShortCircuited",
+        "level": "Warning",
+        "message": "A nested deployment got short-circuited and all its resources got skipped from validation. This is due to a nested template having a parameter that was not fully evaluated (e.g. contains a reference() function). Please see https://aka.ms/WhatIfEvalStopped for more guidance.",
+        "target": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/monitoring-deployment"
+      }
+    ],
+    "duration": "PT0S",
+    "error": null,
+    "extensions": [],
+    "mode": "Incremental",
+    "onErrorDeployment": null,
+    "outputResources": null,
+    "outputs": null,
+    "parameters": {
+      "adminUsername": {
+        "type": "String",
+        "value": "azureadmin"
+      },
+      "bastionHostName": {
+        "type": "String",
+        "value": "bastion-test-weu"
+      },
+      "bastionPublicIpName": {
+        "type": "String",
+        "value": "lab02-pip-bastion-weu"
+      },
+      "bastionSubnetAddressPrefix": {
+        "type": "String",
+        "value": "10.0.2.0/26"
+      },
+      "bastionSubnetName": {
+        "type": "String",
+        "value": "AzureBastionSubnet"
+      },
+      "identityName": {
+        "type": "String",
+        "value": "id-lab02-dev-weu"
+      },
+      "keyVaultName": {
+        "type": "String",
+        "value": "keyvault-lab02-dev-weu"
+      },
+      "location": {
+        "type": "String",
+        "value": "westeurope"
+      },
+      "logAnalyticsName": {
+        "type": "String",
+        "value": "lab02-law-weu"
+      },
+      "networkInterfaceName": {
+        "type": "String",
+        "value": "lab02-nic-weu"
+      },
+      "networkSecurityGroupName": {
+        "type": "String",
+        "value": "lab02-nsg-weu"
+      },
+      "resourceGroupName": {
+        "type": "String",
+        "value": "lab02-rg-weu"
+      },
+      "subnetName": {
+        "type": "String",
+        "value": "lab02-snet-weu"
+      },
+      "subnetPrefix": {
+        "type": "String",
+        "value": "10.0.1.0/24"
+      },
+      "virtualNetworkName": {
+        "type": "String",
+        "value": "lab02-vnet-weu"
+      },
+      "vmName": {
+        "type": "String",
+        "value": "lab02-linux-b2sv2-weu"
+      },
+      "vmSize": {
+        "type": "String",
+        "value": "Standard_B2s_v2"
+      },
+      "vnetAddressSpace": {
+        "type": "String",
+        "value": "10.0.0.0/16"
+      }
+    },
+    "parametersLink": null,
+    "providers": [
+      {
+        "id": null,
+        "namespace": "Microsoft.Resources",
+        "providerAuthorizationConsentState": null,
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locationMappings": null,
+            "locations": [
+              "westeurope"
+            ],
+            "properties": null,
+            "resourceType": "resourceGroups",
+            "zoneMappings": null
+          },
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locationMappings": null,
+            "locations": [
+              null
+            ],
+            "properties": null,
+            "resourceType": "deployments",
+            "zoneMappings": null
+          }
+        ]
+      }
+    ],
+    "provisioningState": "Succeeded",
+    "templateHash": "12315883542289684377",
+    "templateLink": null,
+    "timestamp": "2026-08-28T15:10:22.161654+00:00",
+    "validatedResources": [
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu",
+        "identifiers": null,
+        "resourceType": null
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.KeyVault/vaults/keyvault-lab02-dev-weu",
+        "identifiers": null,
+        "resourceGroup": "lab02-rg-weu",
+        "resourceType": null
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id-lab02-dev-weu",
+        "identifiers": null,
+        "resourceGroup": "lab02-rg-weu",
+        "resourceType": null
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Network/networkSecurityGroups/lab02-nsg-weu",
+        "identifiers": null,
+        "resourceGroup": "lab02-rg-weu",
+        "resourceType": null
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Network/virtualNetworks/lab02-vnet-weu",
+        "identifiers": null,
+        "resourceGroup": "lab02-rg-weu",
+        "resourceType": null
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Network/virtualNetworks/lab02-vnet-weu/subnets/AzureBastionSubnet",
+        "identifiers": null,
+        "resourceGroup": "lab02-rg-weu",
+        "resourceType": null
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Network/virtualNetworks/lab02-vnet-weu/subnets/lab02-snet-weu",
+        "identifiers": null,
+        "resourceGroup": "lab02-rg-weu",
+        "resourceType": null
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/bastion-deployment",
+        "identifiers": null,
+        "resourceGroup": "lab02-rg-weu",
+        "resourceType": null
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/identity-deployment",
+        "identifiers": null,
+        "resourceGroup": "lab02-rg-weu",
+        "resourceType": null
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/keyvault-deployment",
+        "identifiers": null,
+        "resourceGroup": "lab02-rg-weu",
+        "resourceType": null
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/monitoring-deployment",
+        "identifiers": null,
+        "resourceGroup": "lab02-rg-weu",
+        "resourceType": null
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/network-deployment",
+        "identifiers": null,
+        "resourceGroup": "lab02-rg-weu",
+        "resourceType": null
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/rbac-deployment",
+        "identifiers": null,
+        "resourceGroup": "lab02-rg-weu",
+        "resourceType": null
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/0336ca63-cf5a-41f8-9341-efdd1e102914/resourceGroups/lab02-rg-weu/providers/Microsoft.Resources/deployments/vm-deployment",
+        "identifiers": null,
+        "resourceGroup": "lab02-rg-weu",
+        "resourceType": null
+      }
+    ],
+    "validationLevel": null
+  },
+  "type": "Microsoft.Resources/deployments"
+}

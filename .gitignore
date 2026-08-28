@@ -12,9 +12,6 @@
 # Logs
 *.log
 
-# JSON artifacts
-*.json
-
 # Windows
 Thumbs.db
 Desktop.ini
