@@ -85,7 +85,7 @@ resource virtualMachine 'Microsoft.Compute/virtualMachines@2024-11-01' = {
           publicKeys: [
             {
               path: '/home/${adminUsername}/.ssh/authorized_keys'
-              keyData: adminPublicKey
+              keyData: '${adminPublicKey}\n'
             }
           ]
         }
