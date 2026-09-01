@@ -13,8 +13,8 @@ param identityId string
 @description('The administrator username for the virtual machine')
 param adminUsername string
 
-@description('Public SSH key used to access the Linux virtual machine')
-var adminPublicKey = loadTextContent('../keys/id_ed25519.pub')
+@description('SSH public key for VM administrator')
+param adminPublicKey string
 
 @description('The path to the cloud-init configuration file')
 var cloudInit = loadTextContent('../scripts/cloud-init.yaml')

@@ -22,7 +22,7 @@ param adminUsername string
 
 param identityName string
 param keyVaultName string
-
+param adminPublicKey string
 param logAnalyticsName string
 
 resource rg 'Microsoft.Resources/resourceGroups@2025-04-01' = {
@@ -67,6 +67,7 @@ module vm './modules/vm.bicep' = {
     adminUsername: adminUsername
     networkInterfaceName: networkInterfaceName
     subnetId: network.outputs.subnetId
+    adminPublicKey: adminPublicKey
   }
 }
 

@@ -90,3 +90,9 @@ az deployment sub show \
 ## Deployed resources
 
 ![Pipeline Stages](images/02-azure-resources.png)
+
+## Smoke test
+
+## Pipeline
+
+Pipeline Azure DevOps będzie wymagał utworzenia i zweryfikowania pliku YAML w repozytorium oraz najpewniej kilku iteracji konfiguracji.
