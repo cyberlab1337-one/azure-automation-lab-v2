@@ -20,3 +20,16 @@ steps:
   - script: |
       az bicep lint --file deploy.bicep
     displayName: 'Lint Bicep'
+
+  - task: AzureCLI@2
+    displayName: 'Validate deployment'
+    inputs:
+      azureSubscription: 'sc-azure-lab-dev'
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: |
+        az deployment sub validate \
+          --location westeurope \
+          --template-file deploy.bicep \
+          --parameters ./parameters/dev.bicepparam \
+          --parameters adminPublicKey="$(sshPublicKey)"
