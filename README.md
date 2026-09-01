@@ -77,13 +77,13 @@ az deployment sub create \
   --name lab02-deployment \
   --location westeurope \
   --template-file deploy.bicep \
-  --parameters ./parameters/dev.bicepparam
-  --output \
+  --parameters ./parameters/dev.bicepparam \
+  --output json \
   > evidence/03-deployment-lab02.json
 ```
 ```
 az deployment sub show \
-  --name lab01-deployment \
+  --name lab02-deployment \
   --query "{name:name,state:properties.provisioningState,timestamp:properties.timestamp}" \
   --output table
 ```
