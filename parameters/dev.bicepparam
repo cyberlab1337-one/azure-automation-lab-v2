@@ -28,3 +28,4 @@ param keyVaultName = 'keyvault-lab02-dev-weu'
 
 param logAnalyticsName = 'lab02-law-weu'
 
+param adminPublicKey = readEnvironmentVariable('SSH_PUBLIC_KEY')
