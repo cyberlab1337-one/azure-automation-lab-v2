@@ -50,3 +50,18 @@ steps:
           --parameters ./parameters/dev.bicepparam
     env:
       SSH_PUBLIC_KEY: $(sshPublicKey)
+    
+  - task: AzureCLI@2
+    displayName: 'Deploy infrastructure'
+    inputs:
+      azureSubscription: 'sc-azure-lab-dev'
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: |
+        az deployment sub create \
+          --name lab02-pipeline-deployment \
+          --location westeurope \
+          --template-file deploy.bicep \
+          --parameters ./parameters/dev.bicepparam
+    env:
+      SSH_PUBLIC_KEY: $(sshPublicKey)
