@@ -89,3 +89,24 @@ stages:
 
                   env:
                     SSH_PUBLIC_KEY: $(sshPublicKey)
+                
+                - task: AzureCLI@2
+                  displayName: 'Verify deployment'
+                  inputs:
+                    azureSubscription: 'sc-azure-lab-dev'
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      echo "Checking deployment status..."
+
+                      status=$(az deployment sub show \
+                        --name lab02-pipeline-deployment \
+                        --query properties.provisioningState \
+                        --output tsv)
+                      
+                      if [ "$status" == "Succeeded" ]; then
+                        echo "Deployment verification passed."
+                      else
+                        echo "Deployment verification failed. Status: $status"
+                        exit 1
+                      fi
