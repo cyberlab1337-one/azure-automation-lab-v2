@@ -4,7 +4,7 @@ set -e
 
 RESOURCE_GROUP="lab02-rg-weu"
 VM_NAME="lab02-linux-b2sv2-weu"
-KEYVAULT_NAME="lab02-kv-weu"
+KEYVAULT_NAME="keyvault-lab02-dev-weu"
 LAW_NAME="lab02-law-weu"
 
 echo "Starting post-deployment verification..."
